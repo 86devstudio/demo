@@ -1,0 +1,65 @@
+name: demo
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+  get: ^4.6.5
+  get_storage: ^2.1.1
+  sqflite: ^2.2.5
+  path_provider: ^2.0.13
+  flame_audio: ^1.4.0
+  google_fonts: ^4.0.3
+  google_mobile_ads: ^2.3.0
+  dropdown_button2: ^2.0.0
+  lottie: ^2.2.0
+  flex_color_scheme: ^6.1.2
+  flutter_native_splash: ^2.2.19
+  flutter_launcher_icons: ^0.12.0
+  pixel_perfect: ^1.1.1
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/jsons/
+    - assets/images/
+    - assets/lottie/
+    - assets/icon/
+    - assets/db/
+    - assets/audio/
+    - assets/screens/
+
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: '#696969'
+  adaptive_icon_foreground: "assets/icon/adaptive_app_icon.png"
+
+
+flutter_native_splash:
+  image: 'assets/icon/splash.png'
+  fullscreen: true
+  color: '#000000'
