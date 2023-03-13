@@ -32,25 +32,27 @@ class CustomSingleTextField extends StatelessWidget {
       maxLines: maxLines,
       decoration: InputDecoration(
           prefixIcon: prefixIcon,
+
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
                 color: color),
             borderRadius: const BorderRadius.all(
-              Radius.circular(35.0),
+              Radius.circular(5.0),
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
                 color: color),
             borderRadius: const BorderRadius.all(
-              Radius.circular(35.0),
+              Radius.circular(5.0),
             ),
           ),
           hintText: hint,
           hintStyle: TextStyle(
               fontSize: 14,
+              fontWeight: FontWeight.bold,
               color: color),
-          contentPadding: const EdgeInsets.all(10)),
+          contentPadding: const EdgeInsets.all(15)),
     );
   }
 }
