@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import '../controllers/app_controller.dart';
+import '../controllers/todo_controller.dart';
 //import '../controllers/root_controller.dart';
 
 class HomeBinding extends Bindings {
@@ -7,5 +8,6 @@ class HomeBinding extends Bindings {
   void dependencies() {
     //Get.put<RootController>(RootController());
     Get.lazyPut(() => AppController());
+    Get.lazyPut(() => TodoController());
   }
 }

@@ -40,41 +40,19 @@ class SqliteHelper {
     return await db!.query(_tableName);
   }
 
-  /*
-   Future<List<Map<String, dynamic>>> queryWordRows(int level) async {
-    Database? db = await instance.database;
-    return await db!.rawQuery('SELECT * FROM $_tableWordName WHERE level=? ORDER BY no ASC', [level]);
-  }
-   */
-
   Future<int> insertTodo({required String id,required String user_id,required String title, required String description,required String date}) async {
     Database? db = await instance.database;
-    return await db!.rawInsert('INSERT INTO $_tableName (id, user_id, title, description, date) VALUES(?, ?, ?, ?, ?)', [id, title, user_id, title, description, id]);
+    return await db!.rawInsert('INSERT INTO $_tableName (id, user_id, title, description, date) VALUES(?, ?, ?, ?, ?)', [id, user_id, title, description, date]);
   }
-
-  /*
-  Future<int> insertTodo(WordKr data) async {
-    Database? db = await instance.database;
-    return await db!.rawUpdate('INSERT INTO $_tableMyName (no,level,word,min,sentence,wordtest) VALUES(?,?,?,?,?,?)'
-        , [data.no,data.level,data.word,data.min,data.sentence,data.wordtest]);
-  }
-  * */
 
   Future<int> updateTodo({required String title, required String description, required String id}) async {
     Database? db = await instance.database;
     return await db!.rawUpdate('UPDATE $_tableName SET title = ?, description = ? WHERE id= ?', [title, description,id]);
   }
 
-  Future<int> deleteTodo({required int id}) async {
+  Future<int> deleteTodo({required String id}) async {
     Database? db = await instance.database;
     return await db!.rawDelete('DELETE FROM $_tableName WHERE id = ?', [id]);
   }
 
-  /*
-  // 모두 삭제
-  Future<int> deleteAllMyBook() async {
-    Database? db = await instance.database;
-    return await db!.rawUpdate('DELETE FROM $_tableMyName');
-  }
-   */
 }

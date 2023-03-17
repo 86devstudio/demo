@@ -2,6 +2,7 @@ class Constants {
 
   //앱 네임
   static const AppName = '앱 제목';
+  static const userID = 'min';
 
   static const BaseApiUrlPath = '';
   static const BaseApiKey = '';

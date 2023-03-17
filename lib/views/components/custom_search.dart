@@ -4,16 +4,16 @@ import '../../controllers/app_controller.dart';
 class CustomSearch extends StatelessWidget {
   CustomSearch({
     Key? key,
-    required this.controller,
+    required this.onChanged,
     required this.color,
   }) : super(key: key);
-  final AppController controller;
+  final Function(String) onChanged;
   final Color color;
   @override
   Widget build(BuildContext context) {
     return TextField(
       onChanged: (String val) {
-        //controller.search(val);
+        onChanged(val);
       },
       decoration: InputDecoration(
           prefixIcon: Icon(

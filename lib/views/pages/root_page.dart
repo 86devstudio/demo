@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/root_controller.dart';
-import 'home_page.dart';
+import 'home/home_page.dart';
 
 class RootPage extends GetView<RootController> {
   @override

@@ -33,14 +33,14 @@ class CustomMultiTextField extends StatelessWidget {
             borderSide: BorderSide(
                 color: color),
             borderRadius: const BorderRadius.all(
-              Radius.circular(15.0),
+              Radius.circular(5.0),
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
                 color: color),
             borderRadius: const BorderRadius.all(
-              Radius.circular(15.0),
+              Radius.circular(5.0),
             ),
           ),
           hintText: hint,
