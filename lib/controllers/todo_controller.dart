@@ -103,6 +103,7 @@ class TodoController extends GetxController {
         titleController.text = "";
         descriptionController.text = "";
         fetchMyTodos();
+        Get.back();
         Get.toNamed(HomeRoute.todoPath);
         customSnackbar(title: 'Success',message: '등록 성공',backgroundColor: Colors.green.withOpacity(0.5));
 
@@ -153,6 +154,7 @@ class TodoController extends GetxController {
         titleController.text = "";
         descriptionController.text = "";
         fetchMyTodos();
+        Get.back();
         Get.toNamed(HomeRoute.todoPath);
         customSnackbar(title: 'Success',message: '수정 성공',backgroundColor: Colors.green.withOpacity(0.5));
       }else {
